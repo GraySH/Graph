@@ -11,11 +11,15 @@
 #include <iostream>
 #include <stack>
 #include <queue>
+#include <limits>
 using namespace std;
+
 
 class Graph
 {
 public:
+	const int INFINITY = std::numeric_limits<int>::max();
+
 	Graph();
 	~Graph();
 
@@ -55,6 +59,10 @@ public:
 	void printGraphInfo();
 
 	void DepthFirstSearchShow(Point startPoint);
+
+	//Dijkstra's Shortest Path Algorithm
+	void findShortestPath(Point startPoint);
+
 
 };
 

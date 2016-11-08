@@ -102,7 +102,39 @@ void Graph::DepthFirstSearchShow(Point startPoint)
 		{
 			vertexRoute.pop();
 		}
-
 	}
 }
+
+//Dijkstra's Shortest Path Algorithm
+void Graph::findShortestPath(Point startPoint)
+{
+	//create list of point to check if point is already visited.
+	vector<Vertex> distanceTable;
+	distanceTable.reserve(LAST_VERTEX - 1);
+	vector<int> visitedRecord;
+	visitedRecord.reserve(LAST_VERTEX - 1);
+
+	for(int i = 0; i < LAST_VERTEX; i++) //initialize vertexes table with INFINITY distance.
+	{
+		distanceTable.push_back(makeVertex(Point(i),Point(i),INFINITY));
+	}
+
+	Point currentPoint = startPoint;
+	//check point connect from currentPoint to possible next point.
+	for(unsigned int i = 0; i < vec[currentPoint].size(); i++) //ex) size of vec[A] = B, C
+	{
+		//cout << vec[currentPoint][i].to << " ";
+		//get distance from current point to each vertex and save result to table.
+		//add to visited record
+		if(Point(A) == static_cast<int>(currentPoint))
+		{
+
+		}
+
+	}
+
+
+}
+
+
 

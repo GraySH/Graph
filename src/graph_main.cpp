@@ -32,14 +32,16 @@ int main()
 //	graph.addEdge(Graph::F, Graph::E);
 
 
-	graph.addEdge(Graph::A, Graph::B);
-	graph.addEdge(Graph::A, Graph::C);
-	graph.addEdge(Graph::B, Graph::D);
-	graph.addEdge(Graph::C, Graph::D);
-	graph.addEdge(Graph::D, Graph::E);
+	graph.addEdge(Graph::A, Graph::B, 4);
+	graph.addEdge(Graph::A, Graph::C, 3);
+	graph.addEdge(Graph::B, Graph::D, 8);
+	graph.addEdge(Graph::C, Graph::D, 4);
+	graph.addEdge(Graph::D, Graph::E, 7);
 
 	graph.DepthFirstSearchShow(Graph::A);
+	cout << endl;
 
+	graph.findShortestPath(Graph::A);
 
 	return 0;
 }
